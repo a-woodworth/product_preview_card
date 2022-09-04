@@ -1,0 +1,27 @@
+// ___________________________________________________________________
+// Button Styles
+// ___________________________________________________________________
+  
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+button {
+  @include rounded(8px);
+  @include text($text-M, $font-weight--secondary-font, $button-text);
+  background-color: $accent-color;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0.75rem;
+  padding: 0.9375rem 5.75rem;
+
+  &:hover {
+    background-color: $hover-color;
+    transition: 0.25s ease-in;
+  }
+
+  &:focus {
+    outline: auto 2px Highlight; // for non-webkit browsers
+    outline: auto 5px -webkit-focus-ring-color; // for webkit browsers
+  }
+}

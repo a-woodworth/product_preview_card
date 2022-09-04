@@ -1,0 +1,46 @@
+// ___________________________________________________________________
+// Global Config
+// ___________________________________________________________________
+
+@use '../utilities/mixins' as *;
+
+//Font Stack
+$font-family--primary: 'Montserrat', sans-serif;
+$font-family--secondary: 'Fraunces', serif;
+
+// Font Weights
+$font-weight--primary-font: 700;
+$font-weight--secondary-font: 700;
+$font-weight--regular: 500;
+
+// Primary Colors
+$dark-cyan: #{'hsl(158, 36%, 37%)'};
+$very-dark-cyan: #{'hsl(158, 42%, 18%)'};
+$cream: #{'hsl(30, 38%, 92%)'};
+$very-dark-blue: #{'hsl(212, 21%, 14%)'};
+$dark-grayish-blue: #{'hsl(228, 12%, 48%)'};
+$white: #{'hsl(0, 0%, 100%)'};
+
+// Color Usage
+$bg-color-primary: $cream;
+$bg-color-card: $white;
+$text-color-primary: $dark-grayish-blue;
+$text-color-secondary: $very-dark-blue;
+$button-text: $white;
+$hover-color: $very-dark-cyan;
+$accent-color: $dark-cyan;
+$link-color: #{'hsl(158, 100%, 24%)'};
+
+// Text
+$text-L: pxToRem(32px);
+$text-M: pxToRem(14px);
+$text-S: pxToRem(13px);
+$text-XS: pxToRem(12px);
+
+// Line Height
+$line-height__default: 1;
+$line-height__category: 1.21;
+$line-height__body: 1.64;
+$line-height__striken: 1.76;
+
+// Breakpoints
