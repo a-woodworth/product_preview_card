@@ -10,86 +10,8 @@ main {
   flex-direction: column;
   align-items: center;
   margin: auto;
-}
 
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card__header img {
-  border-top-left-radius: 0.625rem;
-  border-top-right-radius: 0.625rem;
-}
-
-.card__body,
-.card__footer {
-  background-color: $bg-color-card;
-}
-
-.card__body {
-  border-bottom-left-radius: 0.625rem;
-  border-bottom-right-radius: 0.625rem;
-  padding: 1.5rem;
-}
-
-.card__footer {
-  width: 100%;
-}
-
-.card__category {
-  @include text($text-XS, $font-weight--regular, $text-color-primary);
-  display: block;
-  letter-spacing: 5px;
-  line-height: $line-height__category;
-  margin-bottom: 0.75rem;
-  text-transform: uppercase;
-}
-
-.card__title {
-  margin-bottom: 1rem;
-}
-
-.card__copy {
-  margin-bottom: 1.5rem;
-}
-
-.card__price {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
-.current-price {
-  @include text($text-L, $font-weight--secondary-font, $accent-color);
-  font-family: $font-family--secondary;
-}
-
-.card__actions {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
-  max-width: 18.4375rem;
-}
-
-// Screen-reader styles
-s::before, s::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-}
-
-s::before {
-  content: ' [start of old price] ';
-}
-
-s::after {
-  content: ' [end of old price] ';
+  @media #{$brkpoint-md} {
+    max-width: 37.5rem;
+  }
 }

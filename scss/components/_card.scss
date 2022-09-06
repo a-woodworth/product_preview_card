@@ -1,0 +1,121 @@
+// ___________________________________________________________________
+// Card Styles
+// ___________________________________________________________________
+  
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{$brkpoint-md} {
+    flex-direction: row;
+  }
+}
+
+.card__header {
+  @media #{$brkpoint-md} {
+    flex-basis: 50%;
+  }
+}
+
+.card__header img {
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+
+  @media #{$brkpoint-md} {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.625rem;
+  }
+}
+
+.card__body {
+  background-color: $bg-color-card;
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+  padding: 1.5rem;
+
+  @media #{$brkpoint-md} {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.625rem;
+    flex-basis: 50%;
+    min-height: 28.125rem;
+    padding: 2rem;
+  }
+}
+
+.card__footer {
+  width: 100%;
+}
+
+.card__category {
+  @include text($text-XS, $font-weight--regular, $text-color-primary);
+  display: block;
+  letter-spacing: 5px;
+  line-height: $line-height__category;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+
+  @media #{$brkpoint-md} {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.card__title {
+  margin-bottom: 1rem;
+
+  @media #{$brkpoint-md} {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.card__copy {
+  margin-bottom: 1.5rem;
+
+  @media #{$brkpoint-md} {
+    margin-bottom: 1.8125rem;
+  }
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+
+  @media #{$brkpoint-md} {
+    margin-bottom: 1.875rem;
+  }
+}
+
+.current-price {
+  @include text($text-L, $font-weight--secondary-font, $accent-color);
+  font-family: $font-family--secondary;
+  line-height: $line-height__default;
+}
+
+.old-price {
+  @include text($text-M, $font-weight--regular, $text-color-primary);
+}
+
+.card__actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 18.4375rem;
+}
+
+// Screen-reader styles
+s::before {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  content: ' [Old price was] ';
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}

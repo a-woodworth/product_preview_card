@@ -72,42 +72,49 @@ button:focus {
   outline: auto 5px -webkit-focus-ring-color;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 3rem;
-  margin: auto;
-  padding-inline: 1rem;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-}
-
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 37.5rem) {
+  .card {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .card__header {
+    flex-basis: 50%;
+  }
+}
 
 .card__header img {
   border-top-left-radius: 0.625rem;
   border-top-right-radius: 0.625rem;
 }
-
-.card__body,
-.card__footer {
-  background-color: hsl(0, 0%, 100%);
+@media (min-width: 37.5rem) {
+  .card__header img {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.625rem;
+  }
 }
 
 .card__body {
+  background-color: hsl(0, 0%, 100%);
   border-bottom-left-radius: 0.625rem;
   border-bottom-right-radius: 0.625rem;
   padding: 1.5rem;
+}
+@media (min-width: 37.5rem) {
+  .card__body {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.625rem;
+    flex-basis: 50%;
+    min-height: 28.125rem;
+    padding: 2rem;
+  }
 }
 
 .card__footer {
@@ -124,13 +131,28 @@ main {
   margin-bottom: 0.75rem;
   text-transform: uppercase;
 }
+@media (min-width: 37.5rem) {
+  .card__category {
+    margin-bottom: 1.25rem;
+  }
+}
 
 .card__title {
   margin-bottom: 1rem;
 }
+@media (min-width: 37.5rem) {
+  .card__title {
+    margin-bottom: 1.5rem;
+  }
+}
 
 .card__copy {
   margin-bottom: 1.5rem;
+}
+@media (min-width: 37.5rem) {
+  .card__copy {
+    margin-bottom: 1.8125rem;
+  }
 }
 
 .card__price {
@@ -139,12 +161,24 @@ main {
   gap: 1.25rem;
   margin-bottom: 1.25rem;
 }
+@media (min-width: 37.5rem) {
+  .card__price {
+    margin-bottom: 1.875rem;
+  }
+}
 
 .current-price {
   font-size: 2rem;
   font-weight: 700;
   color: hsl(158, 36%, 37%);
   font-family: "Fraunces", serif;
+  line-height: 1;
+}
+
+.old-price {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
 }
 
 .card__actions {
@@ -155,21 +189,39 @@ main {
   max-width: 18.4375rem;
 }
 
-s::before, s::after {
+s::before {
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
+  content: " [Old price was] ";
   height: 1px;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
 }
 
-s::before {
-  content: " [start of old price] ";
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 3rem;
+  margin: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 37.5rem) {
+  .container {
+    padding-inline: 0;
+  }
 }
 
-s::after {
-  content: " [end of old price] ";
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+@media (min-width: 37.5rem) {
+  main {
+    max-width: 37.5rem;
+  }
 }
 
 .attribution {
