@@ -181,7 +181,7 @@ button:focus {
   color: hsl(228, 12%, 48%);
 }
 
-.card__actions {
+.card__actions form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -238,3 +238,5 @@ main {
 .attribution a:hover {
   color: hsl(158, 42%, 18%);
 }
+
+/*# sourceMappingURL=styles.css.map */

@@ -101,7 +101,7 @@
   @include text($text-M, $font-weight--regular, $text-color-primary);
 }
 
-.card__actions {
+.card__actions form {
   display: flex;
   flex-direction: column;
   justify-content: center;
