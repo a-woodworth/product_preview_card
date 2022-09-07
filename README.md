@@ -27,7 +27,7 @@ Users should be able to:
 ![Desktop Sceenshot](/screenshots/desktop-screenshot-1440px.png)
 
 ### Links
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/product-preview-card-css-flexbox-Njsl5dgnwK)
 - Live Site URL: [Live Site](https://a-woodworth.github.io/product_preview_card/)
 
 ### Built with
